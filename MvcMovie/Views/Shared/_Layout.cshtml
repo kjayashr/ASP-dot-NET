@@ -3,9 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Movie App</title>
+    <title>@ViewData["Title"] - Lead Manager App</title>
+    <link rel="stylesheet" href="~/assets/bootstrap-material-design-font/css/material.css">
+    <link rel="stylesheet" href="~/assets/et-line-font-plugin/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="~/assets/web/~/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+    <link rel="stylesheet" href="~/assets/tether/tether.min.css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="~/assets/animate.css/animate.min.css">
+    <link rel="stylesheet" href="~/assets/theme/css/style.css">
+    <link rel="stylesheet" href="~/assets/mobirise/css/mbr-additional.css" type="text/css">
 
-    <environment include="Development">
+    @*<environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
@@ -14,10 +26,10 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+    </environment>*@
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    @*<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Movies" asp-action="Index" class="navbar-brand">MvcMovie</a>
+                <a asp-area="" asp-controller="Leads" asp-action="Index" class="navbar-brand">Lead Manager</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -36,12 +48,37 @@
                 </ul>
             </div>
         </div>
+    </nav>*@
+
+    <nav class="navbar navbar-dropdown transparent navbar-fixed-top bg-color">
+        <div class="container">
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+                    <div class="navbar-brand">
+                        <a href="http://krishnakanthajc.com/forInsightly" class="navbar-logo"><img src="~/assets/images/krishna-headshot-127x127.jpg" alt="forInsightly"></a>
+                        <a class="navbar-caption text-warning" asp-controller="Home" asp-action="Index">Krishnkantha Jayashree Chandrashekhar</a>
+                    </div>
+                </div>
+                <div class="mbr-table-cell">
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                 
+                    <li class="nav-item nav-btn"><a asp-area="" asp-controller="Leads" asp-action="Index">Lead Manager</a></li></ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </nav>
-    <div class="container body-content">
+
+   @* <div class="container body-content">*@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - MvcMovie</p>
+            <p>&copy; 2017 - LeadManager Demo for Insightly by Krishnakantha</p>
         </footer>
     </div>
 

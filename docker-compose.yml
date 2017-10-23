@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  mvclead:
+    image: mvclead
+    build:
+      context: ./MvcMovie
+      dockerfile: Dockerfile

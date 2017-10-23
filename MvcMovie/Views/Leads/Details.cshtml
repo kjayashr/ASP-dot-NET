@@ -1,0 +1,48 @@
+﻿@model MvcLead.Models.Lead
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container body-content">
+    <section class="mbr-section mbr-section__container " id="header3-0" data-rv-view="5" style="background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;">
+        <p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <h4>Details</h4>
+            <div>
+                <h4>Lead</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LeadName)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.LeadName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.StartDate)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.StartDate)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Type)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Quote)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Quote)
+                    </dd>
+                </dl>
+            </div>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+            </section>
+ </div>
